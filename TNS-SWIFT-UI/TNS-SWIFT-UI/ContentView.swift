@@ -10,7 +10,7 @@ import SwiftUI
 struct  URLImage: View {
     let urlString: String
     @State var data: Data?
-    
+
     var body: some View {
         if let data = data, let uiimage = UIImage(data: data) {
             Image(uiImage: uiimage)
@@ -27,12 +27,13 @@ struct  URLImage: View {
                 .background(Color.gray)
                 .onAppear {
                     fetchData()
-                    
+
                 }
         }
     }
         private func fetchData() {
-            guard let url = URL(string: urlString) else {
+          let baseUrl = "http://adaspace.local/"
+            guard let url = URL(string: baseUrl + urlString) else {
                 return
             }
             let task = URLSession.shared.dataTask(with: url) { data, _, _ in
@@ -41,19 +42,22 @@ struct  URLImage: View {
             task.resume()
     }
 }
+
 struct ContentView: View {
-    @StateObject var viewModel = ViewModel()
+    @StateObject var viewModel = ViewModelPosts()
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.courses, id: \.self) { course in
+                ForEach(viewModel.posts, id: \.self) { post in
                     HStack {
-                        URLImage(urlString: course.image)
-                       
-                            .frame(width: 130, height: 70)
-                            .background(Color.gray)
-                        Text(course.name)
+                  
+                            URLImage(urlString: post.media ?? "media/4a421607200ad691416b5c0981f4d2.png")
+                                .frame(width: 130, height: 70)
+                                .background(Color.gray)
+                        
+         
+                            Text(post.content)
                             .bold()
                         
                     }
@@ -64,6 +68,7 @@ struct ContentView: View {
             .onAppear {
                 viewModel.fetch()
             }
+            .listStyle(.plain)
         }
     }
 }

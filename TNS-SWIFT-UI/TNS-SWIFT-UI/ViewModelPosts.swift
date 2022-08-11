@@ -9,15 +9,20 @@
 import Foundation
 import SwiftUI
 
-struct Course: Hashable, Codable {
-    let name: String
-    let image: String
+struct Posts: Hashable, Codable {
+    let id: String
+    let content: String
+    let media: String?
+//    let like_count: Int
+    let user_id: String
+    let created_at: String
+    let updated_at: String
 }
 
-class ViewModel: ObservableObject {
-    @Published var courses: [Course] = []
+class ViewModelPosts: ObservableObject {
+    @Published var posts: [Posts] = []
     func fetch() {
-        guard let url = URL(string: "https://iosacademy.io/api/v1/courses/index.php") else {
+        guard let url = URL(string: "http://adaspace.local/posts") else {
             return
         }
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
@@ -27,9 +32,9 @@ class ViewModel: ObservableObject {
             
             //Convert to JSON
             do {
-                let courses = try JSONDecoder().decode([Course].self, from: data)
+                let posts = try JSONDecoder().decode([Posts].self, from: data)
                 DispatchQueue.main.async {
-                    self?.courses = courses
+                    self?.posts = posts
                 }
             }
             catch {

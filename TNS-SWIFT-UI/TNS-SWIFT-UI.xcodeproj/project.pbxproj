@@ -14,8 +14,9 @@
 		85EF785928A3EF6300B72EF1 /* TNS_SWIFT_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF785828A3EF6300B72EF1 /* TNS_SWIFT_UITests.swift */; };
 		85EF786328A3EF6300B72EF1 /* TNS_SWIFT_UIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF786228A3EF6300B72EF1 /* TNS_SWIFT_UIUITests.swift */; };
 		85EF786528A3EF6300B72EF1 /* TNS_SWIFT_UIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF786428A3EF6300B72EF1 /* TNS_SWIFT_UIUITestsLaunchTests.swift */; };
-		85EF787228A3F7C600B72EF1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF787128A3F7C600B72EF1 /* ViewModel.swift */; };
+		85EF787228A3F7C600B72EF1 /* ViewModelPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF787128A3F7C600B72EF1 /* ViewModelPosts.swift */; };
 		85EF787428A52BEF00B72EF1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF787328A52BEF00B72EF1 /* LoginView.swift */; };
+		ED54451328A540D40078CA35 /* ViewModelLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED54451228A540D40078CA35 /* ViewModelLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,9 @@
 		85EF785E28A3EF6300B72EF1 /* TNS-SWIFT-UIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TNS-SWIFT-UIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85EF786228A3EF6300B72EF1 /* TNS_SWIFT_UIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNS_SWIFT_UIUITests.swift; sourceTree = "<group>"; };
 		85EF786428A3EF6300B72EF1 /* TNS_SWIFT_UIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNS_SWIFT_UIUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		85EF787128A3F7C600B72EF1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		85EF787128A3F7C600B72EF1 /* ViewModelPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPosts.swift; sourceTree = "<group>"; };
 		85EF787328A52BEF00B72EF1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ED54451228A540D40078CA35 /* ViewModelLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,8 @@
 			children = (
 				85EF784728A3EF6200B72EF1 /* TNS_SWIFT_UIApp.swift */,
 				85EF784928A3EF6200B72EF1 /* ContentView.swift */,
-				85EF787128A3F7C600B72EF1 /* ViewModel.swift */,
+				85EF787128A3F7C600B72EF1 /* ViewModelPosts.swift */,
+				ED54451228A540D40078CA35 /* ViewModelLogin.swift */,
 				85EF787328A52BEF00B72EF1 /* LoginView.swift */,
 				85EF784B28A3EF6300B72EF1 /* Assets.xcassets */,
 				85EF784D28A3EF6300B72EF1 /* Preview Content */,
@@ -264,8 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				85EF784A28A3EF6200B72EF1 /* ContentView.swift in Sources */,
-				85EF787228A3F7C600B72EF1 /* ViewModel.swift in Sources */,
+				85EF787228A3F7C600B72EF1 /* ViewModelPosts.swift in Sources */,
 				85EF787428A52BEF00B72EF1 /* LoginView.swift in Sources */,
+				ED54451328A540D40078CA35 /* ViewModelLogin.swift in Sources */,
 				85EF784828A3EF6200B72EF1 /* TNS_SWIFT_UIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
