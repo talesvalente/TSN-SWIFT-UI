@@ -60,7 +60,7 @@ struct ContentView: View {
                     .padding(3)
                 }
             }
-            .navigationTitle("Courses")
+            .navigationTitle("Listagens Posts")
             .onAppear {
                 viewModel.fetch()
             }

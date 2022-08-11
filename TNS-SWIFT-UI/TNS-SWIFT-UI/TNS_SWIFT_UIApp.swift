@@ -11,7 +11,7 @@ import SwiftUI
 struct TNS_SWIFT_UIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }
